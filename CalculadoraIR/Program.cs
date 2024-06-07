@@ -17,30 +17,42 @@ namespace CalculadoraIR
 
         static void CalculaIR()
         {
-            Console.WriteLine("Olá, Bem-vindo(a) ao Calcura IR 2022");
+            Console.WriteLine("Olá, Bem-vindo(a) ao Calcura IR 2024");
             Console.WriteLine("");
-            Console.WriteLine("Digite abaixo o valor bruto do seu salário");
-            double salario = double.Parse(Console.ReadLine());
-            if (salario >= 1900.0 && salario <= 2800.0)
+            Console.WriteLine("Digite abaixo a sua renda anual");
+            double rendaAnual = double.Parse(Console.ReadLine());
+
+            if (rendaAnual <= 22847.76)
+            {
+                Console.WriteLine("Contribuinte Isento";
+            }
+            if (rendaAnual >= 22847.77 && rendaAnual <= 33919.80)
             {
                 double percentAliquota = 0.075;
-                double valorAliquota = salario * percentAliquota;
+                double valorAliquota = rendaAnual * percentAliquota;
                 Console.WriteLine("A sua aliquota é de 7%");
                 Console.WriteLine("Você pode deduzir até R$ " + valorAliquota);
             }
-            else if (salario >= 2800.01 && salario <= 3751.0)
+            else if (rendaAnual >= 33919.81 && rendaAnual <= 45012.60)
             {
                 double percentAliquota = 0.15;
-                double valorAliquota = salario * percentAliquota;
+                double valorAliquota = rendaAnual * percentAliquota;
                 Console.WriteLine("A sua aliquota é de 15%");
-                Console.WriteLine("Você pode deduzir até R$ " + valorAliquota);
+                Console.WriteLine("O imposto a pagar é R$ " + valorAliquota);
             }
-            else if (salario >= 3751.01 && salario <= 4664.0)
+            else if (rendaAnual >= 45012.61 && rendaAnual <= 55976.76)
             {
                 double percentAliquota = 0.225;
-                double valorAliquota = salario * percentAliquota;
+                double valorAliquota = rendaAnual * percentAliquota;
                 Console.WriteLine("A sua aliquota é de 22.5%");
-                Console.WriteLine("Você pode deduzir até R$ " + valorAliquota);
+                Console.WriteLine("O imposto a pagar é R$ " + valorAliquota);
+            }
+            else if (rendaAnual >= 55976.16)
+            {
+                double percentAliquota = 0.275;
+                double valorAliquota = rendaAnual * percentAliquota;
+                Console.WriteLine("A sua aliquota é de 27.5%");
+                Console.WriteLine("O imposto a pagar é R$ " + valorAliquota);
             }
 
             Console.WriteLine("Fim do cálculo");
